@@ -15,14 +15,14 @@ Your app needs two database tables that don't exist yet: `admin_users` and `cont
 7. Done! Go to `/admin-login` and login
 
 ### Option B: Automatic Setup
-```bash
+\`\`\`bash
 # Make sure you have these environment variables set:
 export NEXT_PUBLIC_SUPABASE_URL="your-url"
 export SUPABASE_SERVICE_ROLE_KEY="your-key"
 
 # Then run:
 node scripts/setup-database.mjs
-```
+\`\`\`
 
 ## Test It Works
 1. Visit: `https://yourapp.vercel.app/admin-login`

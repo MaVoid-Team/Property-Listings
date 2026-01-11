@@ -13,7 +13,7 @@ Your app works, but the admin database tables don't exist. That's why you get er
 4. Click: **New Query**
 5. **Copy everything below** and paste it:
 
-```sql
+\`\`\`sql
 -- Create admin_users table
 CREATE TABLE IF NOT EXISTS admin_users (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -60,7 +60,7 @@ ON CONFLICT (email) DO NOTHING;
 INSERT INTO contact_info (phone, email, address, hours)
 VALUES ('+1 (555) 123-4567', 'info@propertylistings.com', '123 Business Ave, Suite 100', 'Mon-Fri: 9AM-6PM\nSat: 10AM-4PM\nSun: Closed')
 ON CONFLICT DO NOTHING;
-```
+\`\`\`
 
 6. Click: **Run** (or press Ctrl+Enter)
 7. ✅ Done!

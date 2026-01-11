@@ -23,17 +23,17 @@ If you want to use your own password:
 
 1. Open the file: **`scripts/generate-password-hash.mjs`**
 2. Run it with your desired password:
-   ```bash
+   \`\`\`bash
    node scripts/generate-password-hash.mjs "YourNewPassword123!"
-   ```
+   \`\`\`
 3. Copy the generated hash
 4. Go to Supabase Dashboard → SQL Editor
 5. Run this query:
-   ```sql
+   \`\`\`sql
    DELETE FROM admin_users WHERE email = 'admin@propertylistings.com';
    INSERT INTO admin_users (email, password_hash, is_admin)
    VALUES ('admin@propertylistings.com', 'PASTE_YOUR_HASH_HERE', true);
-   ```
+   \`\`\`
 6. Replace `PASTE_YOUR_HASH_HERE` with the hash from step 2
 7. Click **Run**
 

@@ -45,9 +45,9 @@ Created 3 SQL/script files to set up the database:
 5. Visit `/admin-login` → Use credentials above
 
 ### Method 2: Automatic Setup
-```bash
+\`\`\`bash
 node scripts/setup-database.mjs
-```
+\`\`\`
 (Make sure env variables are set)
 
 ## After Setup

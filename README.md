@@ -29,28 +29,28 @@ A modern, full-featured property listing platform built with Next.js, Supabase, 
 ### Installation
 
 1. Clone the repository
-```bash
+\`\`\`bash
 git clone <your-repo>
 cd property-listing-website
 npm install
-```
+\`\`\`
 
 2. Set up environment variables
-```bash
+\`\`\`bash
 # Create .env.local
 NEXT_PUBLIC_SUPABASE_URL=your_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_key
 SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
 BLOB_READ_WRITE_TOKEN=your_blob_token
-```
+\`\`\`
 
 3. Initialize the database
 Run the SQL migration script from `/scripts/02-complete-schema.sql` in your Supabase dashboard.
 
 4. Start development server
-```bash
+\`\`\`bash
 npm run dev
-```
+\`\`\`
 
 Visit http://localhost:3000
 
@@ -62,7 +62,7 @@ Visit http://localhost:3000
 
 ## Project Structure
 
-```
+\`\`\`
 ├── app/
 │   ├── page.tsx                 # Homepage
 │   ├── properties/              # Property listing pages
@@ -90,7 +90,7 @@ Visit http://localhost:3000
 └── scripts/
     ├── 01-init-schema.sql       # Basic schema
     └── 02-complete-schema.sql   # Complete schema with admin/contact
-```
+\`\`\`
 
 ## Technology Stack
 
@@ -157,10 +157,10 @@ Access at `/admin` (login at `/admin-login`)
 3. Add environment variables
 4. Deploy!
 
-```bash
+\`\`\`bash
 # Or deploy from CLI
 vercel deploy --prod
-```
+\`\`\`
 
 ### Deploy to Other Platforms
 
@@ -183,17 +183,17 @@ See [DEPLOYMENT_CHECKLIST.md](./DEPLOYMENT_CHECKLIST.md) for detailed instructio
 ## Environment Variables
 
 Required:
-```
+\`\`\`
 NEXT_PUBLIC_SUPABASE_URL         # Supabase project URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY    # Supabase anon key
 SUPABASE_SERVICE_ROLE_KEY        # Supabase service role (admin)
 BLOB_READ_WRITE_TOKEN            # Vercel Blob token
-```
+\`\`\`
 
 Optional:
-```
+\`\`\`
 SUPABASE_JWT_SECRET              # JWT secret for token signing
-```
+\`\`\`
 
 ## Common Tasks
 

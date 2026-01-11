@@ -17,7 +17,7 @@ The admin user's password hash was never properly created in the Supabase databa
 ### Step 3: Copy & Paste This SQL
 Copy the entire code below and paste it into the SQL editor:
 
-```sql
+\`\`\`sql
 -- Delete the old (broken) admin user
 DELETE FROM admin_users WHERE email = 'admin@propertylistings.com';
 
@@ -30,7 +30,7 @@ VALUES ('admin@propertylistings.com', '$2b$10$K9E2P4m8X5vL7nQrJ2sT.eEwQxYmZ1aB3d
 DELETE FROM contact_info;
 INSERT INTO contact_info (phone, email, address, hours)
 VALUES ('+1 (555) 123-4567', 'info@propertylistings.com', '123 Business Ave, Suite 100', 'Mon-Fri: 9AM-6PM, Sat: 10AM-4PM, Sun: Closed');
-```
+\`\`\`
 
 ### Step 4: Run the SQL
 1. Click the **Run** button (or press Ctrl+Enter / Cmd+Enter)
@@ -51,16 +51,16 @@ VALUES ('+1 (555) 123-4567', 'info@propertylistings.com', '123 Business Ave, Sui
 If you want a different password:
 
 1. This command generates a bcrypt hash:
-   ```bash
+   \`\`\`bash
    node scripts/generate-password-hash.mjs "YourPassword123!"
-   ```
+   \`\`\`
 
 2. Use that hash in the SQL:
-   ```sql
+   \`\`\`sql
    UPDATE admin_users 
    SET password_hash = 'PASTE_HASH_HERE'
    WHERE email = 'admin@propertylistings.com';
-   ```
+   \`\`\`
 
 ### Option B: Check Environment Variables
 Make sure these are set in Vercel:

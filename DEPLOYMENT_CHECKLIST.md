@@ -23,7 +23,7 @@ In your Vercel project → Settings → Environment Variables, add:
 - [ ] Vercel Blob connected to Vercel
 
 ### 4. Local Testing
-```bash
+\`\`\`bash
 # Install dependencies
 npm install
 
@@ -34,7 +34,7 @@ cp .env.example .env.local
 npm run dev
 
 # Test the following:
-```
+\`\`\`
 
 - [ ] Homepage loads at http://localhost:3000
 - [ ] Properties page shows at `/properties`
@@ -54,11 +54,11 @@ npm run dev
 ## Deployment Steps
 
 ### Step 1: Push to Git
-```bash
+\`\`\`bash
 git add .
 git commit -m "Complete property listing website"
 git push origin main
-```
+\`\`\`
 
 ### Step 2: Verify Vercel Deployment
 1. Go to vercel.com

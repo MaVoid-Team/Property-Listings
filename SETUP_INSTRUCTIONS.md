@@ -57,7 +57,7 @@ These are automatically inserted when you run the SQL migration script.
 
 ## Running Locally
 
-```bash
+\`\`\`bash
 # Install dependencies
 npm install
 
@@ -68,7 +68,7 @@ npm install
 npm run dev
 
 # Open http://localhost:3000
-```
+\`\`\`
 
 ## Feature Guide
 
@@ -97,12 +97,12 @@ npm run dev
 
 ### Deploy to Vercel
 
-```bash
+\`\`\`bash
 # Push to GitHub (if using Git)
 git push origin main
 
 # Or deploy directly from Vercel dashboard
-```
+\`\`\`
 
 1. Connect your GitHub repository to Vercel
 2. Add environment variables in Vercel Project Settings → Environment Variables
