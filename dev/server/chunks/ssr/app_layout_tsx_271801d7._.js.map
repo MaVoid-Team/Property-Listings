@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///home/nerdawy/Property-Listing-Abo-Hedeya/Frontend/app/layout.tsx"],"sourcesContent":["import type React from \"react\"\n\n// Minimal root layout - locale handling is done in [locale]/layout.tsx\nexport default function RootLayout({\n  children,\n}: Readonly<{\n  children: React.ReactNode\n}>) {\n  return children\n}\n\n"],"names":[],"mappings":";;;;AAGe,SAAS,WAAW,EACjC,QAAQ,EAGR;IACA,OAAO;AACT"}}]
+}
