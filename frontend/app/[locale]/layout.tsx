@@ -1,6 +1,6 @@
 import type React from "react"
 import { NextIntlClientProvider } from "next-intl"
-import { getMessages } from "next-intl/server"
+import { getMessages, setRequestLocale } from "next-intl/server"
 import { notFound } from "next/navigation"
 import { Analytics } from "@vercel/analytics/next"
 import { Navbar } from "@/components/navbar"
@@ -28,6 +28,9 @@ export default async function LocaleLayout({
   if (!locales.includes(locale as Locale)) {
     notFound()
   }
+
+  // Enable static rendering - this is required for next-intl with static generation
+  setRequestLocale(locale)
 
   // Get messages for the current locale
   const messages = await getMessages()
