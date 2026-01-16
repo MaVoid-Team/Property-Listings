@@ -12,9 +12,9 @@ const notoArabic = Noto_Sans_Arabic({
 })
 
 export const metadata: Metadata = {
-  title: "Premium Property Listings | Find Your Dream Home",
+  title: "Abo Hedeya | Premium Property Listings",
   description:
-    "Browse our collection of premium properties. Find your perfect home with detailed listings, photos, and easy inquiry process.",
+    "Browse Abo Hedeya's collection of premium properties. Find your perfect home with detailed listings, photos, and easy inquiry process.",
   generator: "v0.app",
   icons: {
     icon: [

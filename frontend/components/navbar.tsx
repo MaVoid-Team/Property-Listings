@@ -29,7 +29,7 @@ export function Navbar() {
           className="flex items-center gap-2 font-bold text-xl text-foreground hover:text-primary transition"
         >
           <Home className="w-6 h-6" />
-          <span>PropertyHub</span>
+          <span>Abo Hedeya</span>
         </Link>
 
         {/* Nav Links */}
