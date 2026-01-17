@@ -2,11 +2,12 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono, Noto_Sans_Arabic } from "next/font/google"
 import "./globals.css"
+import { AuthProvider } from "@/context/auth-context"
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" })
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" })
-const notoArabic = Noto_Sans_Arabic({ 
-  subsets: ["arabic"], 
+const notoArabic = Noto_Sans_Arabic({
+  subsets: ["arabic"],
   variable: "--font-arabic",
   weight: ["400", "500", "600", "700"]
 })
@@ -43,7 +44,9 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <body className={`${geist.variable} ${geistMono.variable} ${notoArabic.variable} font-sans antialiased`}>
-        {children}
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   )

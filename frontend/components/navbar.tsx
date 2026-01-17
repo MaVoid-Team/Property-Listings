@@ -5,11 +5,17 @@ import { Home, Search, Mail } from "lucide-react"
 import { usePathname } from "next/navigation"
 import { useLocale, useTranslations } from "next-intl"
 import { LanguageSwitcher } from "./language-switcher"
+import { useAuth } from "@/context/auth-context"
 
 export function Navbar() {
   const pathname = usePathname()
   const locale = useLocale()
   const t = useTranslations("nav")
+  const { isAuthenticated, logout, isLoading } = useAuth()
+
+  const handleLogout = async () => {
+    await logout()
+  }
 
   // Check if current path matches (accounting for locale prefix)
   const isActive = (path: string) => {
@@ -63,12 +69,22 @@ export function Navbar() {
         {/* CTA Buttons & Language Switcher */}
         <div className="flex items-center gap-3">
           <LanguageSwitcher />
-          <Link
-            href={localizedHref("/admin-login")}
-            className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition font-semibold text-sm sm:text-base"
-          >
-            {t("admin")}
-          </Link>
+          {isAuthenticated ? (
+            <button
+              onClick={handleLogout}
+              disabled={isLoading}
+              className="px-4 py-2 bg-destructive text-destructive-foreground rounded-lg hover:bg-destructive/90 transition font-semibold text-sm sm:text-base disabled:opacity-50"
+            >
+              {isLoading ? "..." : t("logout")}
+            </button>
+          ) : (
+            <Link
+              href={localizedHref("/admin-login")}
+              className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition font-semibold text-sm sm:text-base"
+            >
+              {t("admin")}
+            </Link>
+          )}
         </div>
       </div>
     </nav>
