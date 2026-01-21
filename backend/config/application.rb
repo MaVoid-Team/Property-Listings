@@ -18,6 +18,9 @@ require "action_view/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# Require Pagy explicitly
+require 'pagy'
+
 module Backend
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
