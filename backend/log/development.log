@@ -2683,3 +2683,90 @@ Processing by Api::V1::ContactInfosController#update as */*
 Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 1.0ms)
 
 
+Started GET "/v1/inquiries" for 127.0.0.1 at 2026-01-24 20:54:24 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by Api::V1::InquiriesController#index as */*
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+actionpack (8.1.2) lib/action_dispatch/request/session.rb:263:in `load_for_write!'
+actionpack (8.1.2) lib/action_dispatch/request/session.rb:155:in `[]='
+devise (4.9.4) lib/devise/controllers/store_location.rb:40:in `store_location_for'
+devise (4.9.4) lib/devise/failure_app.rb:256:in `store_location!'
+devise (4.9.4) lib/devise/failure_app.rb:87:in `redirect'
+devise (4.9.4) lib/devise/failure_app.rb:48:in `respond'
+actionpack (8.1.2) lib/abstract_controller/base.rb:221:in `process_action'
+actionpack (8.1.2) lib/abstract_controller/callbacks.rb:267:in `block in process_action'
+activesupport (8.1.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+i18n (1.14.8) lib/i18n.rb:354:in `with_locale'
+devise (4.9.4) lib/devise/failure_app.rb:23:in `block in <class:FailureApp>'
+activesupport (8.1.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (8.1.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (8.1.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (8.1.2) lib/abstract_controller/callbacks.rb:266:in `process_action'
+actionpack (8.1.2) lib/abstract_controller/base.rb:154:in `process'
+actionpack (8.1.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.1.2) lib/action_controller/metal.rb:319:in `block in action'
+devise (4.9.4) lib/devise/failure_app.rb:28:in `call'
+devise (4.9.4) lib/devise/delegator.rb:7:in `call'
+warden (1.2.9) lib/warden/manager.rb:143:in `call_failure_app'
+warden (1.2.9) lib/warden/manager.rb:129:in `process_unauthenticated'
+warden (1.2.9) lib/warden/manager.rb:44:in `call'
+rack (3.2.4) lib/rack/etag.rb:29:in `call'
+rack (3.2.4) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.4) lib/rack/head.rb:15:in `call'
+activerecord (8.1.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.1.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (8.1.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.1.2) lib/action_dispatch/middleware/executor.rb:20:in `call'
+actionpack (8.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.1.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.1.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.1.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.1.2) lib/action_dispatch/middleware/remote_ip.rb:98:in `call'
+actionpack (8.1.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.4) lib/rack/runtime.rb:24:in `call'
+activesupport (8.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in `call'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.1.2) lib/action_dispatch/middleware/executor.rb:20:in `call'
+actionpack (8.1.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.4) lib/rack/sendfile.rb:131:in `call'
+actionpack (8.1.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.1.2) lib/rails/engine.rb:534:in `call'
+puma (7.1.0) lib/puma/configuration.rb:300:in `call'
+puma (7.1.0) lib/puma/request.rb:101:in `block in handle_request'
+puma (7.1.0) lib/puma/thread_pool.rb:355:in `with_force_shutdown'
+puma (7.1.0) lib/puma/request.rb:100:in `handle_request'
+puma (7.1.0) lib/puma/server.rb:503:in `process_client'
+puma (7.1.0) lib/puma/server.rb:262:in `block in run'
+puma (7.1.0) lib/puma/thread_pool.rb:182:in `block in spawn_thread'
+Started POST "/v1/login" for 127.0.0.1 at 2026-01-24 20:55:24 +0200
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"admin_user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "session"=>{"admin_user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}}
+  [1m[36mAdminUser Load (5.7ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = 'admin@propertylistings.com' ORDER BY "admin_users"."created_at" ASC, "admin_users"."id" ASC LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/api/v1/sessions_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 346ms (Views: 3.9ms | ActiveRecord: 49.8ms (1 query, 0 cached) | GC: 5.1ms)
+
+
+Started GET "/v1/inquiries" for 127.0.0.1 at 2026-01-24 20:55:27 +0200
+Processing by Api::V1::InquiriesController#index as */*
+  [1m[36mAdminUser Load (3.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = '2486b80d-39f1-4e2f-ba13-95aa7ca86e3b' LIMIT 1 /*action='index',application='Backend',controller='inquiries'*/[0m
+  [1m[36mInquiry Count (6.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "inquiries" /*action='index',application='Backend',controller='inquiries'*/[0m
+  ↳ app/controllers/api/v1/base_controller.rb:27:in `render_paginated'
+  [1m[36mInquiry Load (0.8ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries" ORDER BY "inquiries"."created_at" DESC LIMIT 20 OFFSET 0 /*action='index',application='Backend',controller='inquiries'*/[0m
+  ↳ app/controllers/api/v1/base_controller.rb:30:in `new'
+  [1m[36mProperty Load (7.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" IN ('50cd6e0d-5b2f-4cd6-8e42-238c5abbf39d', '6fa299a7-557e-4263-861e-7e7b06468ebf') /*action='index',application='Backend',controller='inquiries'*/[0m
+  ↳ app/controllers/api/v1/base_controller.rb:30:in `new'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 100ms (Views: 0.7ms | ActiveRecord: 25.7ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
